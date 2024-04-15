@@ -11,10 +11,29 @@
     --main-gray: #999;
     --sencodary-gray: #333;
     --main-white: #fff;
+    --col1: 1fr;
+    --col2: 1fr;
+    --col3: 1fr;
+    --row1: 1fr;
+    --row2: 1fr;
+    --row3: 1fr;
+    --row4: 1fr;
 }
 
 body{
     font-family: Roboto Thin;
+}
+
+.dp-grid{
+    display: grid;
+}
+
+.dp-flex{
+    display: flex;
+}
+
+.dp-none{
+    display: none;
 }
 
 .hero-section-container {
@@ -24,15 +43,31 @@ body{
     width: 100%; 
     height: 100%; 
     display: grid; 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-  }
+    grid-template-columns: var(--col1) var(--col2) var(--col3);
+    grid-template-rows: var(--row1) var(--row2) var(--row3) var(--row4);
+    overflow: hidden;
+}
 
-  /* Styles for the child divs */
+.hero-section-container:has(.hero-section-card:nth-child(3):hover) {
+    --col1: 2fr;
+}
+
+.hero-section-container:has(.hero-section-card:nth-child(2):hover) {
+    --col3: 2fr;
+}
+
 .hero-section-card {
-    background-color: var(--sencodary-gray);/* Example background color for child divs */
-    padding: 20px; /* Example padding for child divs */
-    border: 1px solid var(--main-gray) /* Example border for child divs */
+    background-color: var(--sencodary-gray);
+    border: 1px solid var(--main-gray);
+    padding: 20px;
+    transition: scale .5s;
+    display: grid;
+}
+
+.hero-section-card:where(:hover, :focus) {
+    scale: 1.1;
+    z-index: 2;
+    box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero-section-main{
