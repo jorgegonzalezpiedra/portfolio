@@ -45,16 +45,22 @@ body{
     display: grid; 
     grid-template-columns: var(--col1) var(--col2) var(--col3);
     grid-template-rows: var(--row1) var(--row2) var(--row3) var(--row4);
-    overflow: hidden;
+    transition: all .2s
 }
 
 .hero-section-container:has(.hero-section-card:nth-child(3):hover) {
-    --col1: 2fr;
+    --col1: 1fr;
+    --row1: .5fr;
 }
 
 .hero-section-container:has(.hero-section-card:nth-child(2):hover) {
-    --col3: 2fr;
+    --col3: 1fr;
+    --row3: 2fr;
 }
+
+/* .hero-section-container:has(.hero-section-card:nth-child(5):hover, .hero-section-card:nth-child(6):hover) {
+    --row4: 1.5fr;
+} */
 
 .hero-section-card {
     background-color: var(--sencodary-gray);
@@ -65,7 +71,7 @@ body{
 }
 
 .hero-section-card:where(:hover, :focus) {
-    scale: 1.1;
+    scale: 1.05;
     z-index: 2;
     box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
 }
@@ -78,27 +84,32 @@ body{
 .hero-section-image{
     grid-column: 1 / 3;
     grid-row: 1;
+    transform-origin: top left;
 }
 
 .hero-section-skills{
     grid-column: 1;
     grid-row: 2 / 5;
     padding: 0;
+    transform-origin: bottom left;
 }
 
 .hero-section-experience{
     grid-column: 3;
     grid-row: 1 / 4;
+    transform-origin: top right;
 }
 
 .hero-section-abouticons{
     grid-column: 2 / 3;
     grid-row: 4;
+    transform-origin: bottom;
 }
 
 .hero-section-certs{
     grid-column: 3 / 4;
     grid-row: 4;
+    transform-origin: bottom right;
 }
 
 .hero-skills-container-1{
@@ -111,7 +122,7 @@ body{
 .hero-skills-container-2{
     height: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
 }
 
