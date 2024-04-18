@@ -4,8 +4,13 @@
     font-weight: 100;
   }
 
+  @font-face {
+    font-family: 'PixelifySans';
+    src: url('../fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100;
+  }
+
 :root{
-    font-family: Robo;
     color-scheme: dark;
     --main-black: #222;
     --main-gray: #999;
@@ -21,7 +26,7 @@
 }
 
 body{
-    font-family: Roboto Thin;
+    font-family: PixelifySans;
 }
 
 .dp-grid{
@@ -65,14 +70,56 @@ body{
 .hero-section-card {
     background-color: var(--sencodary-gray);
     border: 1px solid var(--main-gray);
-    padding: 20px;
     transition: scale .5s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* https://uiverse.io/marcelodolza/heavy-baboon-6 */
+.hero-section-card::before {
+    opacity: 0;
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 150%;
+    background: linear-gradient(
+      200deg,
+      transparent,
+      #ff2288,
+      #387ef0,
+      transparent
+    );
+    transition: opacity 1000ms;
+    animation: rotation-card-border 10000ms infinite linear;
+    animation-play-state: paused;
+    z-index: 0;
+}
+
+.hero-section-card:hover::before {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+@keyframes rotation-card-border {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/* https://uiverse.io/marcelodolza/heavy-baboon-6 */
 
 .hero-section-card:where(:hover, :focus) {
     scale: 1.05;
     z-index: 2;
     box-shadow:0 0 50px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .hero-section-main{
@@ -89,7 +136,7 @@ body{
 .hero-section-skills{
     grid-column: 1;
     grid-row: 2 / 5;
-    padding: 0;
+    padding: 5;
     transform-origin: bottom left;
 }
 
@@ -120,19 +167,31 @@ body{
 
 .hero-skills-container-2{
     height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    background: var(--sencodary-gray);
+    z-index: 1;
 }
 
 .hero-skills-images{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--main-white);
+    padding: 5px;
 }
 
 .hero-skills-category-container{
     align-items: left;
     justify-content: left;
+    width: 70%;
 }
 
 @media only screen and (max-width: 767px) {
