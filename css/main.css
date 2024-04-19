@@ -14,8 +14,10 @@
     color-scheme: dark;
     --main-black: #222;
     --main-gray: #999;
-    --sencodary-gray: #333;
     --main-white: #fff;
+    --main-pink: #ff2288;
+    --main-blue: #387ef0;
+    --sencodary-gray: #333;
     --col1: 1fr;
     --col2: 1fr;
     --col3: 1fr;
@@ -89,11 +91,11 @@ body{
     background: linear-gradient(
       200deg,
       transparent,
-      #ff2288,
-      #387ef0,
+      var(--main-pink),
+      var(--main-blue),
       transparent
     );
-    transition: opacity 1000ms;
+    transition: opacity 300ms;
     animation: rotation-card-border 10000ms infinite linear;
     animation-play-state: paused;
     z-index: 0;
@@ -180,12 +182,11 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
-    background-color: transparent;
     border-width: 1px;
     border-style: solid;
-    border-color: var(--main-white);
-    padding: 5px;
+    padding: 10px;
+    gap: 30px;
+    border-image: linear-gradient(to right, var(--main-pink), var(--main-blue)) 1;
 }
 
 .hero-skills-category-container{
