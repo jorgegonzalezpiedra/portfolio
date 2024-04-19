@@ -26,6 +26,19 @@
     --row2: 1fr;
     --row3: 1fr;
     --row4: 1fr;
+    --shadow-bubble: rgba(0,0,0,0.1);
+    --bubble-border: 0 -1*4 var(--main-white), 
+		0 -2*4 var(--main-black), 
+		4 0 var(--main-white), 
+		4 -1*4 var(--main-black), 
+		2*4 0 var(--main-black), 
+		0 4 var(--main-white), 
+		0 2*4 var(--main-black), 
+		-1*4 0 var(--main-white), 
+		-1*4  4 var(--main-black), 
+		-2*4 0 var(--main-black), 
+		-1*4 -1*4 var(--main-black), 
+		4 4 var(--main-black);
 }
 
 body{
@@ -207,6 +220,7 @@ body{
 .hero-main-container-2{
     height: 100%;
     width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -215,10 +229,15 @@ body{
     z-index: 1;
 }
 
-.hero-main-avatar{
+.hero-main-avatar-container{
+    transition: scale .5s;
+    display: flex;
     cursor: pointer;
 }
 
+.hero-main-avatar-container:hover{
+    scale: 1.05;
+}
 /* TOOLTIP */
 .tooltip-container {
     position: relative;
@@ -262,6 +281,79 @@ body{
     transform: scale(0.9);
 }
 /* TOOLTIP */
+
+/**WORD BALOON*/
+.bubble {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.3em;
+    background-color: #fff;
+    color: #000;
+    padding: 12px;
+    box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000;
+    box-sizing: border-box;
+    width: 200px;
+  }
+  .bubble::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+  .bubble.shadow {
+    box-shadow: 0 -4px #fff, 0 -8px #000, 4px 0 #fff, 4px -4px #000, 8px 0 #000, 0 4px #fff, 0 8px #000, -4px 0 #fff, -4px 4px #000, -8px 0 #000, -4px -4px #000, 4px 4px #000, 4px 12px rgba(0, 0, 0, 0.1), 12px 4px rgba(0, 0, 0, 0.1), 8px 8px rgba(0, 0, 0, 0.1);
+  }
+  .bubble.mini {
+    width: 110px;
+    font-size: 16px;
+    padding: 4px;
+  }
+  .bubble.medium {
+    width: 350px;
+  }
+  .bubble.large {
+    width: 560px;
+    font-size: 24px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .bubble.grow {
+    width: initial;
+  }
+  .bubble.top::after {
+    height: 4px;
+    width: 4px;
+    top: -8px;
+    left: 32px;
+    box-shadow: 0 -4px #000, 0 -8px #000, 0 -12px #000, 0 -16px #000, -4px -12px #000, -8px -8px #000, -12px -4px #000, -4px -4px #fff, -8px -4px #fff, -4px -8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+  }
+  .bubble.right::after {
+    height: 4px;
+    width: 4px;
+    top: 84px;
+    right: -8px;
+    background: white;
+    box-shadow: 4px -4px #fff, 4px 0 #fff, 8px 0 #fff, 0 -8px #fff, 4px 4px #000, 8px 4px #000, 12px 4px #000, 16px 4px #000, 12px 0 #000, 8px -4px #000, 4px -8px #000, 0 -4px #fff;
+  }
+  .bubble.bottom::after {
+    height: 4px;
+    width: 4px;
+    bottom: -8px;
+    left: 32px;
+    box-shadow: 0 4px #000, 0 8px #000, 0 12px #000, 0 16px #000, -4px 12px #000, -8px 8px #000, -12px 4px #000, -4px 4px #fff, -8px 4px #fff, -4px 8px #fff, -4px 0 #fff, -8px 0 #fff, -12px 0 #fff;
+  }
+  .bubble.left::after {
+    height: 4px;
+    width: 4px;
+    top: 20px;
+    left: -8px;
+    background: white;
+    box-shadow: -4px -4px #fff, -4px 0 #fff, -8px 0 #fff, 0 -8px #fff, -4px 4px #000, -8px 4px #000, -12px 4px #000, -16px 4px #000, -12px 0 #000, -8px -4px #000, -4px -8px #000, 0 -4px #fff;
+  }
+/**WORD BALOON*/
 
 @media only screen and (max-width: 767px) {
 }
