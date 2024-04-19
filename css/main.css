@@ -18,6 +18,7 @@
     --main-pink: #ff2288;
     --main-blue: #387ef0;
     --sencodary-gray: #333;
+    --tooltip-background: linear-gradient(45deg, var(--main-pink), var(--main-blue));
     --col1: 1fr;
     --col2: 1fr;
     --col3: 1fr;
@@ -127,6 +128,7 @@ body{
 .hero-section-main{
     grid-column: 2;
     grid-row: 2 / 4;
+    padding: 5;
 }
 
 .hero-section-image{
@@ -182,11 +184,11 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border-width: 1px;
+    gap: 30px;
+    /* border-width: 1px;
     border-style: solid;
     padding: 10px;
-    gap: 30px;
-    border-image: linear-gradient(to right, var(--main-pink), var(--main-blue)) 1;
+    border-image: linear-gradient(to right, var(--main-pink), var(--main-blue)) 1; */
 }
 
 .hero-skills-category-container{
@@ -194,6 +196,72 @@ body{
     justify-content: left;
     width: 70%;
 }
+
+.hero-main-container-1{
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-main-container-2{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--sencodary-gray);
+    z-index: 1;
+}
+
+.hero-main-avatar{
+    cursor: pointer;
+}
+
+/* TOOLTIP */
+.tooltip-container {
+    position: relative;
+}
+  
+.tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transform-origin: bottom;
+    padding: 0.3em 0.6em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    background: var(--tooltip-background);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.tooltip::before {
+    position: absolute;
+    content: " ";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    background: var(--tooltip-background);
+}
+
+.tooltip-container:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+}
+
+.tooltip-container:hover {
+    transform: scale(0.9);
+}
+/* TOOLTIP */
 
 @media only screen and (max-width: 767px) {
 }
