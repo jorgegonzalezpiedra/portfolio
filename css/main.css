@@ -134,8 +134,8 @@ a {
   content: " ";
   position: absolute;
   display: block;
-  width: 90%;
-  height: 150%;
+  width: 180%;
+  height: 90%;
   background: linear-gradient(200deg,
       transparent,
       var(--main-pink),
@@ -207,6 +207,7 @@ a {
 .hero-section-certs {
   grid-column: 3 / 4;
   grid-row: 4;
+  padding: 5;
   transform-origin: bottom right;
 }
 
@@ -357,6 +358,29 @@ a {
 
 .experience-bubble-icons {
   margin-top: 15px;
+}
+
+.hero-certs-container-1 {
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-certs-container-2 {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--sencodary-gray);
+  z-index: 1;
+}
+
+.hero-certs-carousel-container{
+  width: 90%;
+  cursor: grab;
 }
 
 /* TOOLTIP */

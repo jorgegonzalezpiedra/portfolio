@@ -29,6 +29,12 @@ const $heroSectionExperience= document.getElementById("hero-section-experience")
 const $heroExperienceContainer1 = document.getElementById("hero-experience-container-1");
 const $heroExperienceContainer2 = document.getElementById("hero-experience-container-2");
 
+const $heroSectionCerts= document.getElementById("hero-section-certs");
+const $heroCertsContainer1 = document.getElementById("hero-certs-container-1");
+const $heroCertsContainer2 = document.getElementById("hero-certs-container-2");
+
+// initializeCertsSlider();
+
 $heroSectionSkills.addEventListener("mouseover", hoverSkills);
 $heroSectionSkills.addEventListener("mouseout", hoverSkills);
 
@@ -43,6 +49,33 @@ $heroSectionAbouticons.addEventListener("mouseout", hoverAboutIcons);
 
 $heroSectionExperience.addEventListener("mouseover", hoverExperience);
 $heroSectionExperience.addEventListener("mouseout", hoverExperience);
+
+$heroSectionCerts.addEventListener("mouseover", hoverCerts);
+$heroSectionCerts.addEventListener("mouseout", hoverCerts);
+
+
+// window.onload = function(){
+//   $('.hero-certs-carousel-container').slick();
+//   infinite: true,
+//   slidesToShow: 2,
+//   slidesToScroll: 2
+  
+//   //$('.slick-prev')[0].onclick;
+//   // $('.slick-track')[0].style = "opacity: 1; width: 7345px; transform: translate3d(-565px, 0px, 0px);";
+//   // $('.slick-active')[0].setAttribute('tabindex', 0);
+//   // $('.slick-active').each(function(index, element) {
+//   //   element.style = "width: 525px";;
+//   // });
+// }
+$(document).ready(function(){
+  $('.hero-certs-carousel-container').slick({
+  });
+});
+
+
+// function initializeCertsSlider(){
+//   ;
+// }
 
 function hoverSkills() {
     toogleDisplay($heroSkillsContainer1);
@@ -75,6 +108,11 @@ function hoverAboutIcons() {
 function hoverExperience(){
   toogleDisplay($heroExperienceContainer1);
   toogleDisplay($heroExperienceContainer2);
+}
+
+function hoverCerts(){
+  toogleDisplay($heroCertsContainer1);
+  toogleDisplay($heroCertsContainer2);
 }
 
 function toogleDisplay(component) {
