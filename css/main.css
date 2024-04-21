@@ -68,6 +68,25 @@ a {
   display: none;
 }
 
+.text-title-black{
+  color: var(--main-black);
+  font-weight: bold;
+}
+
+.text-title-pink{
+ color: var(--main-pink);
+ font-weight: bold; 
+}
+
+.text-title-blue{
+  color: var(--main-blue);
+  font-weight: bold;
+}
+
+.text-italic{
+  font-style: italic;
+}
+
 .hero-section-container {
   position: fixed;
   top: 0;
@@ -209,21 +228,22 @@ a {
   z-index: 1;
 }
 
-.hero-skills-images {
+.skills-icons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px;
-  /* border-width: 1px;
-    border-style: solid;
-    padding: 10px;
-    border-image: linear-gradient(to right, var(--main-pink), var(--main-blue)) 1; */
+  justify-content: left;
+  gap: 13px;
+  margin-top: 10px;
 }
 
 .hero-skills-category-container {
-  align-items: left;
-  justify-content: left;
-  width: 70%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .hero-main-container-1 {
@@ -345,7 +365,7 @@ a {
 }
 
 .tooltip {
-  position: relative;
+  position: absolute;
   top: 100%;
   left: 50%;
   color: black;
@@ -364,33 +384,8 @@ a {
   border-bottom: 2px solid black;
 }
 
- /* .tooltip {
-  position: relative;
-  cursor: pointer;
-  color: #fff;
-  margin: auto;
-  background: #0b74d0;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  box-shadow:
-    4px 0 0 -2px #fff,
-    -4px 0 0 -2px #fff;
-} */
-.tooltip::before {
-  position: absolute;
-  content: " ";
-  height: 0.6em;
-  width: 0.6em;
-  bottom: -0.2em;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  background: black;
-  z-index: -1;
-  border: 2px solid black;
-}
-
 .tooltip-container:hover .tooltip {
-  top: -70px;
+  top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
