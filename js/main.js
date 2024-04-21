@@ -41,8 +41,8 @@ $heroMainAvatarContainer.addEventListener("click", clickAvatar);
 $heroSectionAbouticons.addEventListener("mouseover", hoverAboutIcons);
 $heroSectionAbouticons.addEventListener("mouseout", hoverAboutIcons);
 
-// $heroSectionExperience.addEventListener("mouseover", hoverExperience);
-// $heroSectionExperience.addEventListener("mouseout", hoverExperience);
+$heroSectionExperience.addEventListener("mouseover", hoverExperience);
+$heroSectionExperience.addEventListener("mouseout", hoverExperience);
 
 function hoverSkills() {
     toogleDisplay($heroSkillsContainer1);

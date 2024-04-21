@@ -51,6 +51,11 @@ body {
   font-family: PixelifySans;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 .dp-grid {
   display: grid;
 }
@@ -250,7 +255,7 @@ body {
   scale: 1.1;
 }
 
-.hero-main-downloadcv-container{
+.hero-main-downloadcv-container {
   margin-top: 60px;
 }
 
@@ -308,16 +313,16 @@ body {
 }
 
 .hero-experience-container-2::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
 .hero-experience-container-2::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
-.hero-experience-boxes-container{
+.hero-experience-boxes-container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -326,33 +331,51 @@ body {
   justify-content: center;
 }
 
-.experience-bubble-title{
+.experience-bubble-title {
   font-weight: bold;
 }
 
-.experience-bubble-icons{
+.experience-bubble-icons {
   margin-top: 15px;
 }
+
 /* TOOLTIP */
 .tooltip-container {
   position: relative;
 }
 
 .tooltip {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 50%;
+  color: black;
   transform: translateX(-50%) scale(0.8);
   transform-origin: bottom;
   padding: 0.3em 0.6em;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s;
-  background: var(--tooltip-background);
+  background: var(--main-white);
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    4px 0 0 -2px black,
+    -4px 0 0 -2px black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
+ /* .tooltip {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  margin: auto;
+  background: #0b74d0;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-shadow:
+    4px 0 0 -2px #fff,
+    -4px 0 0 -2px #fff;
+} */
 .tooltip::before {
   position: absolute;
   content: " ";
@@ -361,20 +384,19 @@ body {
   bottom: -0.2em;
   left: 50%;
   transform: translate(-50%) rotate(45deg);
-  background: var(--tooltip-background);
+  background: black;
+  z-index: -1;
+  border: 2px solid black;
 }
 
 .tooltip-container:hover .tooltip {
-  top: -45px;
+  top: -70px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transform: translateX(-50%) scale(1);
 }
 
-.tooltip-container:hover {
-  transform: scale(0.9);
-}
 /* TOOLTIP */
 
 /**WORD BALOON*/
@@ -465,8 +487,8 @@ body {
 .section-8bit {
   width: 100%;
   float: left;
-  border-left: 10px solid black;
-  border-right: 10px solid black;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
   position: relative;
   box-sizing: border-box;
   transition: all 0.3s;
@@ -475,10 +497,10 @@ body {
 .section-8bit .wrapper {
   display: flex;
   color: black;
-  padding: 5px;
+  padding: 3px;
   margin: -10px 0;
-  border-top: 10px solid;
-  border-bottom: 10px solid black;
+  border-top: 5px solid;
+  border-bottom: 5px solid black;
   background: white;
   justify-content: center;
 }
@@ -501,33 +523,35 @@ body {
 .section-8bit .wrapper::before,
 .section-8bit .wrapper::after {
   content: '';
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   display: block;
   position: absolute;
   background: black;
 }
 
 .section-8bit::before {
-  top: -5px;
-  left: -5px;
+  top: -6px;
+  left: -3px;
 }
 
 .section-8bit::after {
-  top: -5px;
-  right: -5px;
+  top: -6px;
+  right: -3px;
 }
 
 .section-8bit .wrapper::before {
-  bottom: -5px;
-  left: -5px;
+  bottom: -6px;
+  left: -3px;
 }
 
 .section-8bit .wrapper::after {
-  bottom: -5px;
-  right: -5px;
+  bottom: -6px;
+  right: -3px;
 }
+
 /**8-BIT BUTTONS*/
+
 
 /**BACKGROUND*/
 /**BACKGROUND*/
