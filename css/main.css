@@ -226,7 +226,23 @@ a {
   justify-content: center;
   position: relative;
   background: var(--sencodary-gray);
+  overflow: scroll;
+  overflow-x: hidden;
   z-index: 1;
+}
+
+.hero-skills-container-2::-webkit-scrollbar {
+    width: 12px;
+}
+
+.hero-skills-main-container-2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+.hero-skills-container-2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .skills-icons {
