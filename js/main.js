@@ -33,9 +33,6 @@ const $heroSectionCerts = document.getElementById("hero-section-certs");
 const $heroCertsContainer1 = document.getElementById("hero-certs-container-1");
 const $heroCertsContainer2 = document.getElementById("hero-certs-container-2");
 
-
-// initializeCertsSlider();
-
 $heroSectionSkills.addEventListener("mouseover", hoverSkills);
 $heroSectionSkills.addEventListener("mouseout", hoverSkills);
 

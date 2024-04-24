@@ -49,7 +49,11 @@
 
 body {
   font-family: PixelifySans;
-  font-size: 17px;
+  font-size: 18px;
+}
+
+.text-title{
+  font-size: 20px;
 }
 
 a {
@@ -567,7 +571,7 @@ a {
 }
 
 .section-8bit .wrapper:hover {
-  background: var(--tooltip-background);
+  background: linear-gradient(120deg, var(--main-pink), var(--main-blue));
   cursor: pointer;
 }
 
@@ -576,7 +580,7 @@ a {
 }
 
 .section-8bit:hover {
-  scale: 1.1;
+  scale: 1.05;
 }
 
 .section-8bit::before,
