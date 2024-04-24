@@ -25,13 +25,14 @@ const $heroSectionAbouticons = document.getElementById("hero-section-abouticons"
 const $heroAbouticonsContainer1 = document.getElementById("hero-abouticons-container-1");
 const $heroAbouticonsContainer2 = document.getElementById("hero-abouticons-container-2");
 
-const $heroSectionExperience= document.getElementById("hero-section-experience");
+const $heroSectionExperience = document.getElementById("hero-section-experience");
 const $heroExperienceContainer1 = document.getElementById("hero-experience-container-1");
 const $heroExperienceContainer2 = document.getElementById("hero-experience-container-2");
 
-const $heroSectionCerts= document.getElementById("hero-section-certs");
+const $heroSectionCerts = document.getElementById("hero-section-certs");
 const $heroCertsContainer1 = document.getElementById("hero-certs-container-1");
 const $heroCertsContainer2 = document.getElementById("hero-certs-container-2");
+
 
 // initializeCertsSlider();
 
@@ -54,28 +55,10 @@ $heroSectionCerts.addEventListener("mouseover", hoverCerts);
 $heroSectionCerts.addEventListener("mouseout", hoverCerts);
 
 
-// window.onload = function(){
-//   $('.hero-certs-carousel-container').slick();
-//   infinite: true,
-//   slidesToShow: 2,
-//   slidesToScroll: 2
-  
-//   //$('.slick-prev')[0].onclick;
-//   // $('.slick-track')[0].style = "opacity: 1; width: 7345px; transform: translate3d(-565px, 0px, 0px);";
-//   // $('.slick-active')[0].setAttribute('tabindex', 0);
-//   // $('.slick-active').each(function(index, element) {
-//   //   element.style = "width: 525px";;
-//   // });
-// }
 $(document).ready(function(){
   $('.hero-certs-carousel-container').slick({
   });
 });
-
-
-// function initializeCertsSlider(){
-//   ;
-// }
 
 function hoverSkills() {
     toogleDisplay($heroSkillsContainer1);
@@ -111,8 +94,19 @@ function hoverExperience(){
 }
 
 function hoverCerts(){
+  
   toogleDisplay($heroCertsContainer1);
-  toogleDisplay($heroCertsContainer2);
+
+  if($heroCertsContainer2.classList.contains('hero-certs-container-2')){
+    $heroCertsContainer2.classList.add('height-0');
+    $heroCertsContainer2.classList.remove('hero-certs-container-2');
+    $heroCertsContainer2.classList.remove('dp-flex');
+  }else if($heroCertsContainer2.classList.contains('height-0')){
+    $heroCertsContainer2.classList.remove('height-0');
+    $heroCertsContainer2.classList.add('hero-certs-container-2');
+    $heroCertsContainer2.classList.add('dp-flex');
+  }
+  $('.hero-certs-carousel-container').slick('setPosition');   
 }
 
 function toogleDisplay(component) {
