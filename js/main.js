@@ -1,7 +1,9 @@
 const aboutMeDescripctions = [
-"Hey there! I'm Jorge, <span style='color:#ff2288; font-weight:bold; font-style: italic'>a developer</span>, which means I can fix your printer or you can <span style='color:#387ef0; font-weight:bold'>click here</span> to get to know me a little better",
+"Hey there! I'm Jorge, <span style='color:#ff2288; font-weight:bold; font-style: italic'>a developer</span> if you want to know me a little better, you just have to <span style='color:#387ef0; font-weight:bold'>click here</span>!",
 "My career so far has been focused on <span style='color:#ff2288; font-weight:bold'>bakcend development</span> with <span style='color:#387ef0;'>Java, Spring and SQL</span> mainly",
-"But I'm not only that, when I'm not coding, you'll likely find me on the court <span style='font-style:italic'>shooting hoops</span> – a big basketball fan here! 🏀",
+"I have also worked in a <span style='color:#ff2288; font-weight:bold'>frontend developments</span> using <span style='color:#387ef0;'>HTML, CSS, JavaScript and JQuery</span>",
+"And yes, as a developer I can also fix your printer. But im not only a <span style='font-style:italic'>techie</span>...",
+"When I'm not coding, you'll likely find me on the court <span style='font-style:italic'>shooting hoops</span>, a basketball fan here! 🏀",
 "<span style='color:#ff2288; font-weight:bold;'>Learning</span> is my secret weapon. New languages, hot tech trends? Bring it on, I'm ready!",
 "So...If you have reached this point and you are up for a coding challenge or a hoop game <span style='color:#387ef0; font-weight:bold'>Let's connect!</span>",
 "You have my <span style='color:#ff2288; font-weight:bold;'>info</span> in the <span style='font-style:italic'>contact section</span> below</br></br> See ya! 👋"]

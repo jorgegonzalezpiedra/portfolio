@@ -16,6 +16,46 @@
   font-weight: 100;
 }
 
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  50%{
+    opacity: 0.2;
+  }
+
+  75%{
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+
+  50%{
+    opacity: 0.2;
+  }
+
+  75%{
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 :root {
   color-scheme: dark;
   --main-black: #222;
@@ -305,7 +345,6 @@ a {
   transition: scale .5s;
   display: flex;
   cursor: pointer;
-  height: 200px;
 }
 
 .hero-main-avatar-container:hover {
@@ -391,6 +430,27 @@ a {
 .experience-bubble-title {
   font-weight: bold;
 }
+
+.experience-bubble1 {
+  animation: moveToRight 1s ease-in-out;
+}
+
+.experience-bubble2 {
+  animation: moveToLeft 1s ease-in-out;
+}
+
+.experience-bubble3 {
+  animation: moveToRight 1s ease-in-out;
+}
+
+.experience-bubble4 {
+  animation: moveToLeft 1s ease-in-out;
+}
+
+.experience-bubble5 {
+  animation: moveToRight 1s ease-in-out;
+}
+
 
 .experience-bubble-icons {
   margin-top: 15px;
