@@ -1,5 +1,5 @@
 const aboutMeDescripctions = [
-"Hey there! I'm Jorge, <span style='color:#ff2288; font-weight:bold; font-style: italic'>a developer</span> if you want to know me a little better, you just have to <span style='color:#387ef0; font-weight:bold'>click here</span>!",
+"Hey there! I'm Jorge, <span style='color:#ff2288; font-weight:bold; font-style: italic'>a developer</span> if you want to know me a little better,just <span style='color:#387ef0; font-weight:bold'>click here</span>!",
 "My career so far has been focused on <span style='color:#ff2288; font-weight:bold'>bakcend development</span> with <span style='color:#387ef0;'>Java, Spring and SQL</span> mainly",
 "I have also worked in a <span style='color:#ff2288; font-weight:bold'>frontend developments</span> using <span style='color:#387ef0;'>HTML, CSS, JavaScript and JQuery</span>",
 "And yes, as a developer I can also fix your printer. But im not only a <span style='font-style:italic'>techie</span>...",
