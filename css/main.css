@@ -627,7 +627,7 @@ a {
   right: -3px
 }
 
-@media only screen and (max-width:1366px) {
+@media only screen and (max-width:900px) {
   #mobile-overlay {
     display: flex;
     position: fixed;
